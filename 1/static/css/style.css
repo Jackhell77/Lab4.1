@@ -1,0 +1,26 @@
+.frame-menu{
+position:relative;overflow:inherit;zoom:1;width:970px;height:50px;margin:0 auto;padding:0;line-height:1.5;font-size:20px;}
+.frame-menu ul{
+position:absolute;z-index:100;top:7px;left:10px;margin:0;padding:0;}
+.frame-menu ul li{
+float:left;list-style:none outside;width:220px;height: 25px;}
+.frame-menu ul li a:link,.frame-menu ul li a:visited{
+display:block;margin:0;padding:8px 0 0 0;*padding:10px 0 0 0;text-align:center;font-size:13px;font-weight:700;color:#000000;text-decoration:none;}
+.frame-menu ul li a:hover{
+height:109px;*height:90px;color:#000000;}
+.frame-menu ul li a div{
+display:none;padding:10px 5px 0 5px;margin:0;text-align:center;font-size:12px;font-weight:400;}
+.frame-menu ul li a:hover div.info{
+display:block;color:#000000;height: 10px;}
+.frame-menu li a:focus {
+    outline-width:0;
+}
+
+.tip{position:relative;color:#0000cc;text-decoration:none;font-size:15px;}
+.tip:hover{background:none;}
+.tip span{display:none;}
+.tip:hover span{display:block;position:absolute;top:20px;left:8px;border-bottom:2px solid #eee;border-right:2px solid #eee;}
+.tip:hover span p{border:1px solid #ccc;background:#fff;color:#000;padding:1px;text-align:left;font-size:12px;}
+
+
+		

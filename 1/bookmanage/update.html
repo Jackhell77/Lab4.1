@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<form method="post">
+<title>UpdatePage</title>
+<link rel="StyleSheet" href="/static/css/normalize.css" type="text/css" />
+<link rel="StyleSheet" href="/static/css/jquery-ui.css" type="text/css" />
+<link rel="StyleSheet" href="/static/css/jquery.idealforms.min.css" type="text/css" />
+<link rel="StyleSheet" href="/static/css/style.css" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<style type="text/css">
+body{font:normal 15px/1.5 Arial, Helvetica, Free Sans, sans-serif;color: #222;background-image:url(http://jkhell.qiniudn.com/pattern.png);overflow-y:scroll;padding:60px 0 0 0;}
+#my-form{width:755px;margin:0 auto;border:1px solid #ccc;padding:3em;border-radius:3px;box-shadow:0 0 2px rgba(0,0,0,.2);}
+#comments{width:350px;height:100px;}
+#row {
+    display: block;
+}
+</style>
+
+<div align="center"><h1>Update Book Message</h1></div>
+    <form id="my-form">
+    <div align="center">
+        <A class="tip" href="/insertBook/">Add new book |</A>
+        <A class="tip" href="/book/">All books |</A>
+        <A class="tip" href="/search/">HomePage</A>
+            <div><lable>AuthorName : </lable><input name="AuthorName" type="text" value={{book.AuthorID.Name}} required></div>
+            <div><lable>Age : </lable><input name="Age" type="text" value={{book.AuthorID.Age}} required></div>
+            <div><lable>AuthorID : </lable><input name="AuthorID" type="text" pattern="[0-9]*" placeholder="Only digital" value={{book.AuthorID.AuthorID}} required></div>
+            <div><lable>Publisher : </lable><input name="Publisher" type="text" value={{book.Publisher}} required></div>
+            <div><lable>PublishDate : </lable><input name="PublishDate" type="Date" pattern="\d{4}-\d{2}-\d{2}" value={{PublishDate}}  required></div>
+            <div><lable>Price : </lable><input name="Price" type="text" value={{book.Price}} required></div>
+            <div><hr/></div>
+            <div>
+            <button type="submit">Update</button>
+            <button id="reset" type="button">Reset</button>
+            </div>
+    </div>
+</form>
+</div>
+</html>

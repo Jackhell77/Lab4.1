@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<title>通讯录</title>
+<link rel="StyleSheet" href="/static/css/normalize.css" type="text/css" />
+<link rel="StyleSheet" href="/static/css/jquery-ui.css" type="text/css" />
+<link rel="StyleSheet" href="/static/css/jquery.idealforms.min.css" type="text/css" />
+<link rel="StyleSheet" href="/static/css/style.css" type="text/css" />
+<style type="text/css">
+body{font:normal 15px/1.5 Arial, Helvetica, Free Sans, sans-serif;color: #222;background-image:url(http://jkhell.qiniudn.com/pattern.png);overflow-y:scroll;padding:60px 0 0 0;}
+#my-form{width:755px;margin:0 auto;border:1px solid #ccc;padding:3em;border-radius:3px;box-shadow:0 0 2px rgba(0,0,0,.2);}
+#comments{width:200px;height:50px;}
+#row {
+    display: block;
+}
+</style>
+<div><h1 align="center">{{head}}</h1></div>
+<div align="center">
+<A class="tip" href="/insertBook/">Add new book |</A>
+<A class="tip" href="/book/">All books |</A>
+<A class="tip" href="/search/">HomePage</A>
+</div>
+<div align="center">
+
+  	<div class="frame-menu">
+  		<ul>
+  			{% for book in book_list %}
+  			<li> 
+  				<a target="_blank">
+  					<h4>{{ book.Title }}</h4>
+	      			<div class="info">ISBN ：{{book.ISBN}}</div>
+	      			<div class="info">Publisher : {{book.Publisher}}</div>
+	      			<div class="info">PublishDate : {{book.PublishDate}}</div>
+	      			<div class="info">Price : {{book.Price}}</div>
+	      			<div class="info">AuthorID : {{book.AuthorID.AuthorID}}</div>
+	      			<div class="info">AuthorName : {{book.AuthorID.Name}}</div>
+	      			<div class="info">Age : {{book.AuthorID.Age}}</div>
+	      			<div class="info">Country : {{book.AuthorID.Country}}</div>
+	      			<div class="info"><input type="button" value="delete"   onclick="location.href='/delete/?ISBN={{book.ISBN}}'">
+					<input type="button" value="update"   onclick="location.href='/update/?ISBN={{book.ISBN}}'"></div>	
+	      		</a>
+      		</li>
+      		{% endfor %}
+  		</ul>
+  	</div>
+</div>
+</html>

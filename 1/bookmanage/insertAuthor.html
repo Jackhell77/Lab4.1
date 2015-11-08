@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+<title>BookManage-InsertNewBook</title>
+<link rel="StyleSheet" href="/static/css/normalize.css" type="text/css" />
+<link rel="StyleSheet" href="/static/css/jquery-ui.css" type="text/css" />
+<link rel="StyleSheet" href="/static/css/jquery.idealforms.min.css" type="text/css" />
+<link rel="StyleSheet" href="/static/css/style.css" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<style type="text/css">
+body{font:normal 15px/1.5 Arial, Helvetica, Free Sans, sans-serif;color: #222;background:url(http://jkhell.qiniudn.com/pattern.png);overflow-y:scroll;padding:60px 0 0 0;}
+#my-form{width:755px;margin:0 auto;border:1px solid #ccc;padding:3em;border-radius:3px;box-shadow:0 0 2px rgba(0,0,0,.2);}
+#comments{width:350px;height:100px;}
+#row {
+    display: block;
+}
+</style>
+</head>
+<body>
+    <div><h1 align="center">Add new book</h1></div>
+	<div class="row">
+		<div>
+			<form  method="POST" action="/insertAuthor/" id="my-form">
+				<a class="tip" href="/book/">All books |</a>
+				<a class="tip" href="/search/">HomePage </a>
+				<div><lable>ISBN : </lable><input name="ISBN" type="text" pattern="^\d{13}$" placeholder="13 numbers need" readonly="readonly"  value={{ ISBN }}></div>
+				<div><lable>Title : </lable><input name="Title" type="text" value={{Title}} readonly="readonly"  required></div>
+				<div><lable>AuthorName : </lable><input name="_AuthorName" type="text" value={{ AuthorName }}  readonly="readonly"  required></div>
+				<div><lable>Publisher : </lable><input name="Publisher" type="text" value={{ Publisher }}  readonly="readonly" required></div>
+				<div><lable>PublishDate : </lable><input name="PublishDate" type="Date" value={{ PublishDate }}  readonly="readonly" required></div>
+				<div><lable>Price : </lable><input name="Price" type="text" value={{ Price }}   readonly="readonly" required></div>
+				<div><hr/></div>
+				<div><lable>AuthorID : </lable><input name="AuthorID" type="text" pattern="[0-9]*" placeholder="Only digital"required></div>
+				<div><lable>Age : </lable><input name="Age" type="text" required></div>
+				<div><lable>Country : </lable><input name="Country" type="text" required></div>
+				<div><hr/></div>
+				<div>
+        		<button type="submit" >Save</button>
+        		<button id="reset" type="button">Reset</button>
+      			</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

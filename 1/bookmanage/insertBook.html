@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+<title>BookManage-InsertNewBook</title>
+<link rel="StyleSheet" href="/static/css/normalize.css" type="text/css" />
+<link rel="StyleSheet" href="/static/css/jquery-ui.css" type="text/css" />
+<link rel="StyleSheet" href="/static/css/jquery.idealforms.min.css" type="text/css" />
+<link rel="StyleSheet" href="/static/css/style.css" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<style type="text/css">
+body{font:normal 15px/1.5 Arial, Helvetica, Free Sans, sans-serif;color: #222;background-image:url(http://jkhell.qiniudn.com/pattern.png);overflow-y:scroll;padding:60px 0 0 0;}
+#my-form{width:755px;margin:0 auto;border:1px solid #ccc;padding:3em;border-radius:3px;box-shadow:0 0 2px rgba(0,0,0,.2);}
+#comments{width:350px;height:100px;}
+#row {
+    display: block;
+}
+</style>
+</head>
+<body>
+    <div><h1 align="center">Add new author</h1></div>
+	<div class="row">
+		<div class="eightcol last">
+			<form  method="POST" id="my-form">
+				<a class="tip" href="/book/">All books |</a>
+				<a class="tip" href="/search/">HomePage </a>
+				<div class="ideal-wrap"><lable class="ideal-label" style="width: 68px;">ISBN : </lable><input name="ISBN" type="text" pattern="^\d{13}$" placeholder="13 numbers need" required></div>
+				<div><lable class="ideal-label" style="width: 68px;">Title : </lable><input name="Title" type="text" required></div>
+				<div><lable class="ideal-label" style="width: 68px;">AuthorName : </lable><input name="AuthorName" type="text" required></div>
+				<div><lable class="ideal-label" style="width: 68px;">Publisher : </lable><input name="Publisher" type="text" required></div>
+				<div><lable class="ideal-label" style="width: 68px;">PublishDate : </lable><input name="PublishDate" type="date" pattern="\d{4}-\d{2}-\d{2}" required></div>
+				<div><lable class="ideal-label" style="width: 68px;">Price : </lable><input name="Price" type="text" required></div>
+				<div><hr/></div>
+				<div>
+        		<button type="submit">Save</button>
+        		<button type="reset" >Reset</button>
+      			</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
